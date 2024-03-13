@@ -7,7 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="loginTest"/>
+          <include name="addEmployee"/>
         </methods>
       </class> <!-- Demo.OrangeHRM -->
     </classes>

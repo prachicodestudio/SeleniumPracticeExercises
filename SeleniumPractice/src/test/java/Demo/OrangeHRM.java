@@ -30,7 +30,31 @@ public class OrangeHRM {
 		driver.get(baseUrl);
 
 		//timer i kept as 60 you can keep 40
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60)); //60 seconds
+	}
+
+	@Test(priority = 1)
+	public void doLoginWithInvalidCredential() throws InterruptedException
+	{
+		//find username and enter username "Admin"
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+
+		//find password and enter invalid password 
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("1234");//wrong password
+
+		//login button click
+		driver.findElement(By.xpath("//button[@type='submit']")).submit();
+
+
+		String message_expected = "Invalid credentials";
+
+		String message_actual = driver.findElement(By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")).getText();
+
+		//Assert.assertTrue(message_actual.contains(message_expected));
+
+		Assert.assertEquals(message_expected, message_actual);
+
+		Thread.sleep(1500);
 	}
 
 	@Test(priority = 2)
@@ -59,28 +83,47 @@ public class OrangeHRM {
 		Assert.assertEquals("OrangeHRM", pageTitle);
 	}
 
-	@Test(priority = 1)
-	public void doLoginWithInvalidCredential() throws InterruptedException
+	@Test(priority =3)
+	public void addEmployee() throws InterruptedException
 	{
-		//find username and enter username "Admin"
-		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+		//   //span[text()='PIM']
+		//     //a[text()='Add Employee']
 
-		//find password and enter invalid password 
-		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("1234");//wrong password
+		///    //input[@placeholder='First Name']
 
-		//login button click
-		driver.findElement(By.xpath("//button[@type='submit']")).submit();
+		//     //input[@placeholder='Last Name']
 
+		//    //button[normalize-space()='Save']
 
-		String message_expected = "Invalid credentials";
+		//find PIM Menu and click on PIM Menu
+		driver.findElement(By.xpath("//span[text()='PIM']")).click();
 
-		String message_actual = driver.findElement(By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")).getText();
+		//find Add employee and click on Add Employee option
+		driver.findElement(By.xpath("//a[text()='Add Employee']")).click();
+
+		//enter first name
+		driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Prachi");
+
+		//enter last name
+		driver.findElement(By.xpath(" //input[@placeholder='Last Name']")).sendKeys("Gupta");
+
 		
-		//Assert.assertTrue(message_actual.contains(message_expected));
-		
-		Assert.assertEquals(message_expected, message_actual);
+		Thread.sleep(2000);
+		//click save button
+		driver.findElement(By.xpath("//button[normalize-space()='Save']")).click();
 
-		Thread.sleep(1500);
+		// Verify if the employee is successfully added by checking the employee list personal details
+		String confirmationMessage = driver.findElement(By.xpath("//h6[normalize-space()='Personal Details']")).getText();
+		
+		
+		if (confirmationMessage.contains("Personal Details")) {
+			System.out.println("Employee added successfully!");
+		} else {
+			System.out.println("Failed to add employee!");
+		}
+
+		Assert.assertEquals("Personal Details", confirmationMessage);
+
 	}
 
 	public void logOut() throws InterruptedException
@@ -90,12 +133,12 @@ public class OrangeHRM {
 
 		List <WebElement> elementlist = driver.findElements(By.xpath("//a[@class='oxd-userdropdown-link']"));
 
-		for (int i=0; i<elementlist.size(); i++)
+		/*for (int i=0; i<elementlist.size(); i++)
 		{
 			Thread.sleep(1000);
 			System.out.println(i + ":" + elementlist.get(i).getText());
 
-		}
+		}*/
 
 		elementlist.get(3).click();//click on logout
 

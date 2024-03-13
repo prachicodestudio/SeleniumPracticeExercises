@@ -1,0 +1,29 @@
+
+Session -01
+-----------
+Base URL : https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+Test Cases
+----------
+1.	Login Test Case:
+•	Open the OrangeHRM login page.
+•	Enter valid credentials.
+•	Click the login button.
+•	Verify successful login by checking the dashboard page title.
+
+
+2.	Invalid Login Test Case:
+•	Open the OrangeHRM login page.
+•	Enter invalid credentials.
+•	Click the login button.
+•	Verify that an error message is displayed indicating invalid credentials.
+
+
+3.	Add Employee Test Case:
+•	Login to OrangeHRM.
+•	Navigate to the "PIM" menu and select "Add Employee".
+•	Fill in the required details (e.g., first name, last name).
+•	Click the save button.
+•	Verify that the employee is successfully added by checking the employee list for Personal Details.
+
+Session -02
