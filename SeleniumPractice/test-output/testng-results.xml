@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-13T14:51:07 IST" name="Default suite" finished-at="2024-03-13T14:51:34 IST" duration-ms="26781">
+  <suite started-at="2024-03-14T14:17:05 IST" name="Default suite" finished-at="2024-03-14T14:17:48 IST" duration-ms="42508">
     <groups>
     </groups>
-    <test started-at="2024-03-13T14:51:07 IST" name="Default test" finished-at="2024-03-13T14:51:34 IST" duration-ms="26781">
+    <test started-at="2024-03-14T14:17:05 IST" name="Default test" finished-at="2024-03-14T14:17:48 IST" duration-ms="42508">
       <class name="Demo.OrangeHRM">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Demo.OrangeHRM@49139829]" started-at="2024-03-13T14:51:07 IST" name="setup" finished-at="2024-03-13T14:51:11 IST" duration-ms="3948" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Demo.OrangeHRM@6069db50]" started-at="2024-03-14T14:17:05 IST" name="setup" finished-at="2024-03-14T14:17:11 IST" duration-ms="5428" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="doLoginWithInvalidCredential()[pri:1, instance:Demo.OrangeHRM@49139829]" started-at="2024-03-13T14:51:11 IST" name="doLoginWithInvalidCredential" finished-at="2024-03-13T14:51:15 IST" duration-ms="3499" status="PASS">
+        <test-method signature="doLoginWithInvalidCredential()[pri:1, instance:Demo.OrangeHRM@6069db50]" started-at="2024-03-14T14:17:11 IST" name="doLoginWithInvalidCredential" finished-at="2024-03-14T14:17:14 IST" duration-ms="3559" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLoginWithInvalidCredential -->
-        <test-method signature="loginTestWithValidCredential()[pri:2, instance:Demo.OrangeHRM@49139829]" started-at="2024-03-13T14:51:15 IST" name="loginTestWithValidCredential" finished-at="2024-03-13T14:51:16 IST" duration-ms="1181" status="PASS">
+        <test-method signature="loginTestWithValidCredential()[pri:2, instance:Demo.OrangeHRM@6069db50]" started-at="2024-03-14T14:17:14 IST" name="loginTestWithValidCredential" finished-at="2024-03-14T14:17:18 IST" duration-ms="3328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTestWithValidCredential -->
-        <test-method signature="addEmployee()[pri:3, instance:Demo.OrangeHRM@49139829]" started-at="2024-03-13T14:51:16 IST" name="addEmployee" finished-at="2024-03-13T14:51:26 IST" duration-ms="10722" status="PASS">
+        <test-method signature="addEmployee()[pri:3, instance:Demo.OrangeHRM@6069db50]" started-at="2024-03-14T14:17:18 IST" name="addEmployee" finished-at="2024-03-14T14:17:31 IST" duration-ms="13703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Demo.OrangeHRM@49139829]" started-at="2024-03-13T14:51:26 IST" name="tearDown" finished-at="2024-03-13T14:51:34 IST" duration-ms="7396" status="PASS">
+        <test-method signature="searchEmployeeNyName()[pri:4, instance:Demo.OrangeHRM@6069db50]" started-at="2024-03-14T14:17:31 IST" name="searchEmployeeNyName" finished-at="2024-03-14T14:17:43 IST" duration-ms="11210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchEmployeeNyName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Demo.OrangeHRM@6069db50]" started-at="2024-03-14T14:17:43 IST" name="tearDown" finished-at="2024-03-14T14:17:48 IST" duration-ms="5244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

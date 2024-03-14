@@ -7,9 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
-import junit.framework.Assert;
+//import junit.framework.Assert;
 
 public class OrangeHRM {
 
@@ -33,7 +34,7 @@ public class OrangeHRM {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60)); //60 seconds
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled=true)
 	public void doLoginWithInvalidCredential() throws InterruptedException
 	{
 		//find username and enter username "Admin"
@@ -57,7 +58,7 @@ public class OrangeHRM {
 		Thread.sleep(1500);
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, enabled=true)
 	public void loginTestWithValidCredential()
 	{
 		//find username and enter username "Admin"
@@ -79,13 +80,14 @@ public class OrangeHRM {
 			System.out.println("Login failed!");
 		}*/
 
-
+		logOut();
 		Assert.assertEquals("OrangeHRM", pageTitle);
 	}
 
-	@Test(priority =3)
+	@Test(priority =3, enabled=true)
 	public void addEmployee() throws InterruptedException
 	{
+		logIn();
 		//   //span[text()='PIM']
 		//     //a[text()='Add Employee']
 
@@ -102,31 +104,84 @@ public class OrangeHRM {
 		driver.findElement(By.xpath("//a[text()='Add Employee']")).click();
 
 		//enter first name
-		driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Prachi");
+		driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Radha");
 
 		//enter last name
 		driver.findElement(By.xpath(" //input[@placeholder='Last Name']")).sendKeys("Gupta");
 
-		
+
 		Thread.sleep(2000);
 		//click save button
 		driver.findElement(By.xpath("//button[normalize-space()='Save']")).click();
 
 		// Verify if the employee is successfully added by checking the employee list personal details
 		String confirmationMessage = driver.findElement(By.xpath("//h6[normalize-space()='Personal Details']")).getText();
-		
-		
+
+
 		if (confirmationMessage.contains("Personal Details")) {
 			System.out.println("Employee added successfully!");
 		} else {
 			System.out.println("Failed to add employee!");
 		}
 
+		logOut();
 		Assert.assertEquals("Personal Details", confirmationMessage);
 
 	}
 
-	public void logOut() throws InterruptedException
+	@Test(priority=4, enabled = true)
+	public void searchEmployeeNyName() throws InterruptedException
+	{
+		logIn();
+
+		//find PIM Menu and click on PIM Menu
+		driver.findElement(By.xpath("//span[text()='PIM']")).click();
+
+		//Select Employee List
+		driver.findElement(By.xpath("//a[normalize-space()='Employee List']")).click();
+
+		driver.findElements(By.tagName("input")).get(1).sendKeys("Radha");
+
+		//Click the search button.
+		driver.findElement(By.xpath("//button[normalize-space()='Search']")).click();
+
+		//    //span[@class='oxd-text oxd-text--span']
+		Thread.sleep(5000)	;
+		List<WebElement> element=	driver.findElements(By.xpath("//span[@class='oxd-text oxd-text--span']"));
+
+		String expected_message = "Record Found";
+		String message_actual = element.get(0).getText();
+		System.out.println(message_actual);
+
+		logOut();
+
+		Assert.assertTrue(message_actual.contains(expected_message));
+
+
+
+		/*for (int i = 0 ; i<element.size(); i++)
+	{
+		 System.out.println("At index "+ i + "text is :" + element.get(i).getText());  
+	}*/
+
+		//	•	Verify that the record is found.
+		//	•	Logout the user.
+
+	}
+
+	public void logIn()
+	{
+		//find username and enter username "Admin"
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+
+		//find password and enter password admin123
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+
+		//login button click
+		driver.findElement(By.xpath("//button[@type='submit']")).submit();
+
+	}
+	public void logOut() 
 	{
 		driver.findElement(By.xpath("//p[@class='oxd-userdropdown-name']")).click();
 		//driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
@@ -150,7 +205,7 @@ public class OrangeHRM {
 	public void tearDown() throws InterruptedException
 	{
 
-		logOut();
+		//	logOut();
 
 		Thread.sleep(5000);//wait for 5 secs before quit
 		driver.close();

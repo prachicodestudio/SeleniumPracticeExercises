@@ -1,0 +1,105 @@
+package Demo;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.BeforeTest;
+
+public class AutomateColorPicker {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+
+	/*	String baseUrl = "https://www.educative.io/answers/how-to-add-a-color-picker-in-html";
+		WebDriver driver ; 
+
+		driver=new ChromeDriver();
+
+		//maximise windows
+		driver.manage().window().maximize();
+
+		//open url
+		driver.get(baseUrl);
+
+		//timer i kept as 60 you can keep 40
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60)); //60 seconds
+
+
+	//	driver.switchTo().frame(0);
+		//get inital color
+		// Locate the color picker element
+		WebElement colorPicker = driver.findElement(By.id("colorpicker"));
+		colorPicker.click();
+
+		// Get the initial selected color value
+		String selectedColor = colorPicker.getAttribute("value");
+		System.out.println("Initial Selected color: " + selectedColor);*/
+
+
+	/*	JavascriptExecutor jse=(JavascriptExecutor)driver;
+
+		//	 JavascriptExecutor executor = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0," + 1000 + ")");
+		Thread.sleep(2000);
+		jse.executeScript("document.getElementById('colorpicker').value='#FF2600'");
+
+		Thread.sleep(10000);
+
+		// Get the selected color value
+		selectedColor = colorPicker.getAttribute("value");
+		System.out.println("Final Selected color: " + selectedColor);*/
+
+
+
+
+		WebDriver driver ; 
+
+		driver=new ChromeDriver();
+
+		//maximise windows
+		driver.manage().window().maximize();
+
+		// Open a webpage with a color picker
+		driver.get("https://www.w3schools.com/colors/colors_picker.asp");
+
+		// Locate the color picker element
+		WebElement colorPicker = driver.findElement(By.id("html5colorpicker"));
+
+		// Click on the color picker to activate it
+		colorPicker.click();
+
+		// Get the selected color value
+		String selectedColor = colorPicker.getAttribute("value");
+		System.out.println(" Before Selection color is : " + selectedColor);
+
+
+		JavascriptExecutor jse=(JavascriptExecutor)driver;
+
+		//	 JavascriptExecutor executor = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0," + 1000 + ")");
+		Thread.sleep(2000);
+		jse.executeScript("document.getElementById('html5colorpicker').value='#FF2600'");
+
+		//Thread.sleep(10000);
+
+		
+
+
+		// Get the selected color value
+		selectedColor = colorPicker.getAttribute("value");
+		System.out.println(" After Selection color is : " + selectedColor);
+		 
+
+		driver.close();
+		driver.quit();
+
+
+	}
+
+}
