@@ -27,10 +27,20 @@ Test Cases
 •	Logout the user.
 
 
-4.	Search Employee Test Case:
+4.	Search Employee Test Case By Name:
 •	Login to OrangeHRM.
 •	Navigate to the "PIM" menu and select "Employee List".
 •	Enter search criteria (e.g., employee name, employee ID).
 •	Click the search button.
 •	Verify that the record is found.
 •	Logout the user.
+
+5.	Search Employee Test Case By Id:
+•	Login to OrangeHRM.
+•	Navigate to the "PIM" menu and select "Employee List".
+•	Enter search criteria (i.e employee ID).
+•	Click the search button.
+•	Verify employee id in search result.
+•	Logout the user.
+
+

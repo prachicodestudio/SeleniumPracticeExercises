@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_OMxXgOBSEe6eBJ03zEwT9w" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_OMxXgeBSEe6eBJ03zEwT9w" bindingContexts="_OMxXiuBSEe6eBJ03zEwT9w">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;emailable-report.html&quot; tooltip=&quot;SeleniumPractice/test-output/emailable-report.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/test-output/emailable-report.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;index.html&quot; tooltip=&quot;SeleniumPractice/test-output/index.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/test-output/index.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.m2e.editor.MavenPomEditor&quot; name=&quot;pom.xml&quot; tooltip=&quot;SeleniumPractice/pom.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/pom.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;OrangeHRM.java&quot; tooltip=&quot;SeleniumPractice/src/test/java/Demo/OrangeHRM.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/src/test/java/Demo/OrangeHRM.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AutomateColorPicker.java&quot; tooltip=&quot;SeleniumPractice/src/test/java/Demo/AutomateColorPicker.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/src/test/java/Demo/AutomateColorPicker.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Notes&quot; tooltip=&quot;SeleniumPractice/Notes&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/Notes&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Notes&quot; tooltip=&quot;SeleniumPractice/Notes&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/Notes&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;OrangeHRM.java&quot; tooltip=&quot;SeleniumPractice/src/test/java/Demo/OrangeHRM.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/src/test/java/Demo/OrangeHRM.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;emailable-report.html&quot; tooltip=&quot;SeleniumPractice/test-output/emailable-report.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/test-output/emailable-report.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;index.html&quot; tooltip=&quot;SeleniumPractice/test-output/index.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/test-output/index.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.m2e.editor.MavenPomEditor&quot; name=&quot;pom.xml&quot; tooltip=&quot;SeleniumPractice/pom.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/pom.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AutomateColorPicker.java&quot; tooltip=&quot;SeleniumPractice/src/test/java/Demo/AutomateColorPicker.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SeleniumPractice/src/test/java/Demo/AutomateColorPicker.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_OMxXgeBSEe6eBJ03zEwT9w" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_OdRRoOBSEe6eBJ03zEwT9w" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
@@ -144,7 +144,7 @@
                   </children>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_OlKCZuBSEe6eBJ03zEwT9w" elementId="bottom" containerData="2993" selectedElement="_xkBKMOBYEe6eBJ03zEwT9w">
+              <children xsi:type="basic:PartStack" xmi:id="_OlKCZuBSEe6eBJ03zEwT9w" elementId="bottom" containerData="2993" selectedElement="_OlKCa-BSEe6eBJ03zEwT9w">
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
                 <tags>Java</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_OlKCZ-BSEe6eBJ03zEwT9w" elementId="org.eclipse.ui.views.ProblemView" ref="_Ok-cIOBSEe6eBJ03zEwT9w" closeable="true">
@@ -228,15 +228,21 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_Ok3ucOBSEe6eBJ03zEwT9w" elementId="org.eclipse.ui.editorss" selectedElement="_Ok3uceBSEe6eBJ03zEwT9w">
-      <children xsi:type="basic:PartStack" xmi:id="_Ok3uceBSEe6eBJ03zEwT9w" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_QN99wOBTEe6eBJ03zEwT9w">
+      <children xsi:type="basic:PartStack" xmi:id="_Ok3uceBSEe6eBJ03zEwT9w" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_UYgQEOK6Ee63c8y938egog">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_QN99wOBTEe6eBJ03zEwT9w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="OrangeHRM.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;OrangeHRM.java&quot; partName=&quot;OrangeHRM.java&quot; title=&quot;OrangeHRM.java&quot; tooltip=&quot;SeleniumPractice/src/test/java/Demo/OrangeHRM.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SeleniumPractice/src/test/java/Demo/OrangeHRM.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;4010&quot; selectionTopPixel=&quot;3765&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_5sG_kOKxEe63c8y938egog" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="OrangeHRM.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;OrangeHRM.java&quot; partName=&quot;OrangeHRM.java&quot; title=&quot;OrangeHRM.java&quot; tooltip=&quot;SeleniumPractice/src/test/java/Demo/OrangeHRM.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SeleniumPractice/src/test/java/Demo/OrangeHRM.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;4468&quot; selectionTopPixel=&quot;2785&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_UYgQEOK6Ee63c8y938egog" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Notes" iconURI="platform:/plugin/org.eclipse.ui.editors/icons/full/obj16/file_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Notes&quot; partName=&quot;Notes&quot; title=&quot;Notes&quot; tooltip=&quot;SeleniumPractice/Notes&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SeleniumPractice/Notes&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1395&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>org.eclipse.ui.DefaultTextEditor</tags>
           <tags>active</tags>
           <tags>activeOnClose</tags>
         </children>
@@ -405,7 +411,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_OeO68OBSEe6eBJ03zEwT9w" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_n38pQOEjEe66mN99nguYcA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_ONkCGuBSEe6eBJ03zEwT9w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_1XfIsOKxEe63c8y938egog" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_ONkCGuBSEe6eBJ03zEwT9w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_OeO68eBSEe6eBJ03zEwT9w" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -413,8 +419,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_OeO68-BSEe6eBJ03zEwT9w" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_n39QUOEjEe66mN99nguYcA" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_ONg-ruBSEe6eBJ03zEwT9w"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_n393YOEjEe66mN99nguYcA" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_ONiMqeBSEe6eBJ03zEwT9w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_1XgW0OKxEe63c8y938egog" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" command="_ONg-ruBSEe6eBJ03zEwT9w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_1Xg94OKxEe63c8y938egog" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_ONiMqeBSEe6eBJ03zEwT9w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_OeO69OBSEe6eBJ03zEwT9w" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -438,7 +444,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_OePiAOBSEe6eBJ03zEwT9w" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_n3-ecOEjEe66mN99nguYcA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_ONkB0uBSEe6eBJ03zEwT9w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_1Xhk8OKxEe63c8y938egog" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_ONkB0uBSEe6eBJ03zEwT9w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_OePiAeBSEe6eBJ03zEwT9w" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,7 +35,7 @@ public class OrangeHRM {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60)); //60 seconds
 	}
 
-	@Test(priority = 1, enabled=true)
+	@Test(priority = 1, enabled=false)
 	public void doLoginWithInvalidCredential() throws InterruptedException
 	{
 		//find username and enter username "Admin"
@@ -58,7 +59,7 @@ public class OrangeHRM {
 		Thread.sleep(1500);
 	}
 
-	@Test(priority = 2, enabled=true)
+	@Test(priority = 2, enabled=false)
 	public void loginTestWithValidCredential()
 	{
 		//find username and enter username "Admin"
@@ -84,7 +85,7 @@ public class OrangeHRM {
 		Assert.assertEquals("OrangeHRM", pageTitle);
 	}
 
-	@Test(priority =3, enabled=true)
+	@Test(priority =3, enabled=false)
 	public void addEmployee() throws InterruptedException
 	{
 		logIn();
@@ -129,7 +130,7 @@ public class OrangeHRM {
 
 	}
 
-	@Test(priority=4, enabled = true)
+	@Test(priority=4, enabled = false)
 	public void searchEmployeeNyName() throws InterruptedException
 	{
 		logIn();
@@ -169,6 +170,49 @@ public class OrangeHRM {
 
 	}
 
+	@Test(priority =5)
+	public void searchEmployeeById() throws InterruptedException
+	{
+
+		String empId = "0372";
+		String message_actual ="";
+		logIn();
+		
+		
+		//find PIM Menu and click on PIM Menu
+		driver.findElement(By.xpath("//span[text()='PIM']")).click();
+
+		//Select Employee List
+		driver.findElement(By.xpath("//a[normalize-space()='Employee List']")).click();
+
+		//enter empoyee id
+		driver.findElements(By.tagName("input")).get(2).sendKeys(empId);
+		
+		//Click the search button.
+		driver.findElement(By.xpath("//button[normalize-space()='Search']")).click();
+
+		Thread.sleep(2000)	;
+		
+		 JavascriptExecutor executor = (JavascriptExecutor) driver;
+	     executor.executeScript("window.scrollBy(0," + 500 + ")");
+
+	     Thread.sleep(2000)	;
+	     
+	     
+		List<WebElement> rows = driver.findElements(By.xpath("(//div[@role='row'])"));
+		
+		
+		if(rows.size()>1)
+		{
+			message_actual = driver.findElement(By.xpath("((//div[@role='row'])[2]/div[@role='cell'])[2]")).getText();
+		
+		}
+		
+		logOut();
+		Assert.assertEquals(empId, message_actual);
+		
+	}
+
 	public void logIn()
 	{
 		//find username and enter username "Admin"
@@ -181,6 +225,7 @@ public class OrangeHRM {
 		driver.findElement(By.xpath("//button[@type='submit']")).submit();
 
 	}
+
 	public void logOut() 
 	{
 		driver.findElement(By.xpath("//p[@class='oxd-userdropdown-name']")).click();
