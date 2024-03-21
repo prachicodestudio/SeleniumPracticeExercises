@@ -1,5 +1,6 @@
 package Demo;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -170,7 +171,7 @@ public class OrangeHRM {
 
 	}
 
-	@Test(priority =5)
+	@Test(priority =5, enabled=false)
 	public void searchEmployeeById() throws InterruptedException
 	{
 
@@ -212,7 +213,40 @@ public class OrangeHRM {
 		Assert.assertEquals(empId, message_actual);
 		
 	}
+	
+@Test(priority=6, enabled = true)	
+public void fileUpload() throws IOException, InterruptedException
+{
+ logIn();	
 
+	//find PIM Menu and click on PIM Menu
+	driver.findElement(By.xpath("//span[text()='PIM']")).click();
+ 
+	//click on configuration button
+	driver.findElement(By.xpath("//span[@class='oxd-topbar-body-nav-tab-item']")).click();
+	
+	
+	//click on Data import
+	driver.findElement(By.partialLinkText("Data ")).click();
+	
+	//click on browse button
+	driver.findElement(By.xpath("//div[@class='oxd-file-button']")).click();
+	
+	
+	Thread.sleep(5000);//pause of 5 seconds
+	
+	Runtime.getRuntime().exec("C://Users//ASUS//Desktop//CS_SeleniumExercises//SeleniumPractice//FileUploadOrangeHRM.exe");
+
+	Thread.sleep(5000);
+	
+	//click on upload button
+	driver.findElement(By.xpath("//button[@type='submit']")).submit();
+	
+	logOut();
+	
+	
+}
+	
 	public void logIn()
 	{
 		//find username and enter username "Admin"

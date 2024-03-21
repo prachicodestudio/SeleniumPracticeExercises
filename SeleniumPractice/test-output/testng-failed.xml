@@ -5,9 +5,9 @@
     <classes>
       <class name="Demo.OrangeHRM">
         <methods>
-          <include name="searchEmployeeNyName"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="fileUpload"/>
         </methods>
       </class> <!-- Demo.OrangeHRM -->
     </classes>

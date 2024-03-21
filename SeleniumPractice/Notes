@@ -42,5 +42,34 @@ Test Cases
 •	Click the search button.
 •	Verify employee id in search result.
 •	Logout the user.
+/*********************************************Session 05***************************************************/
+File Upload
+AutoIt
+------
+CodeStudio Channel  AutoIt Session Link
+https://youtu.be/WKPFqSlpLBw?si=EAz3FOi9XxTqSvgV
 
 
+1. Finder Tool
+https://www.autoitscript.com/cgi-bin/getfile.pl?autoit3/autoit-v3-setup.zip
+
+2. AutoIt Script Editor
+https://www.autoitscript.com/site/autoit-script-editor/downloads/
+
+Invoke AutoIt
+Invoke AutoIt Script Editor
+
+1 Write script to upload file
+
+We need to write script to upload file so we will use some method of AutoIt.
+Each method will have some own functionality
+
+	ControlFocus-This will give focus on the window
+
+	ControlSetText-This will set the file path
+
+	ControlClick-This will click on button
+
+2 Compile script and create exe
+3 Use exe in selenium code
+/************************************************************************************************/
