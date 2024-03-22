@@ -86,8 +86,8 @@ public class OrangeHRM {
 		Assert.assertEquals("OrangeHRM", pageTitle);
 	}
 
-	@Test(priority =3, enabled=false)
-	public void addEmployee() throws InterruptedException
+	@Test(priority =3, enabled=true)
+	public void addEmployee() throws InterruptedException, IOException
 	{
 		logIn();
 		//   //span[text()='PIM']
@@ -111,8 +111,30 @@ public class OrangeHRM {
 		//enter last name
 		driver.findElement(By.xpath(" //input[@placeholder='Last Name']")).sendKeys("Gupta");
 
+		
+		//////////////////////Add Image////////////////////////////////////////////
+		
+		//add image
+				driver.findElement(By.xpath("//button[@class='oxd-icon-button oxd-icon-button--solid-main employee-image-action']")).click();
+				
+				
+				Thread.sleep(5000);//pause of 5 seconds
 
-		Thread.sleep(2000);
+				Runtime.getRuntime().exec("C://Users//ASUS//Desktop//CS_SeleniumExercises//SeleniumPractice//AddImageOrangeHRM.exe");
+
+				
+				Thread.sleep(5000);
+
+		
+		/////////////////////////////////////////////////////////////////////////////
+		
+		
+		
+		
+		
+		
+
+		///Thread.sleep(2000);
 		//click save button
 		driver.findElement(By.xpath("//button[normalize-space()='Save']")).click();
 
@@ -214,7 +236,7 @@ public class OrangeHRM {
 		
 	}
 	
-@Test(priority=6, enabled = true)	
+@Test(priority=6, enabled = false)	
 public void fileUpload() throws IOException, InterruptedException
 {
  logIn();	
