@@ -111,28 +111,28 @@ public class OrangeHRM {
 		//enter last name
 		driver.findElement(By.xpath(" //input[@placeholder='Last Name']")).sendKeys("Gupta");
 
-		
+
 		//////////////////////Add Image////////////////////////////////////////////
-		
+
 		//add image
-				driver.findElement(By.xpath("//button[@class='oxd-icon-button oxd-icon-button--solid-main employee-image-action']")).click();
-				
-				
-				Thread.sleep(5000);//pause of 5 seconds
+		driver.findElement(By.xpath("//button[@class='oxd-icon-button oxd-icon-button--solid-main employee-image-action']")).click();
 
-				Runtime.getRuntime().exec("C://Users//ASUS//Desktop//CS_SeleniumExercises//SeleniumPractice//AddImageOrangeHRM.exe");
 
-				
-				Thread.sleep(5000);
+		Thread.sleep(5000);//pause of 5 seconds
 
-		
+		Runtime.getRuntime().exec("C://Users//ASUS//Desktop//CS_SeleniumExercises//SeleniumPractice//AddImageOrangeHRM.exe");
+
+
+		Thread.sleep(5000);
+
+
 		/////////////////////////////////////////////////////////////////////////////
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
 
 		///Thread.sleep(2000);
 		//click save button
@@ -200,8 +200,8 @@ public class OrangeHRM {
 		String empId = "0372";
 		String message_actual ="";
 		logIn();
-		
-		
+
+
 		//find PIM Menu and click on PIM Menu
 		driver.findElement(By.xpath("//span[text()='PIM']")).click();
 
@@ -210,65 +210,65 @@ public class OrangeHRM {
 
 		//enter empoyee id
 		driver.findElements(By.tagName("input")).get(2).sendKeys(empId);
-		
+
 		//Click the search button.
 		driver.findElement(By.xpath("//button[normalize-space()='Search']")).click();
 
 		Thread.sleep(2000)	;
-		
-		 JavascriptExecutor executor = (JavascriptExecutor) driver;
-	     executor.executeScript("window.scrollBy(0," + 500 + ")");
 
-	     Thread.sleep(2000)	;
-	     
-	     
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("window.scrollBy(0," + 500 + ")");
+
+		Thread.sleep(2000)	;
+
+
 		List<WebElement> rows = driver.findElements(By.xpath("(//div[@role='row'])"));
-		
-		
+
+
 		if(rows.size()>1)
 		{
 			message_actual = driver.findElement(By.xpath("((//div[@role='row'])[2]/div[@role='cell'])[2]")).getText();
-		
+
 		}
-		
+
 		logOut();
 		Assert.assertEquals(empId, message_actual);
-		
+
 	}
-	
-@Test(priority=6, enabled = false)	
-public void fileUpload() throws IOException, InterruptedException
-{
- logIn();	
 
-	//find PIM Menu and click on PIM Menu
-	driver.findElement(By.xpath("//span[text()='PIM']")).click();
- 
-	//click on configuration button
-	driver.findElement(By.xpath("//span[@class='oxd-topbar-body-nav-tab-item']")).click();
-	
-	
-	//click on Data import
-	driver.findElement(By.partialLinkText("Data ")).click();
-	
-	//click on browse button
-	driver.findElement(By.xpath("//div[@class='oxd-file-button']")).click();
-	
-	
-	Thread.sleep(5000);//pause of 5 seconds
-	
-	Runtime.getRuntime().exec("C://Users//ASUS//Desktop//CS_SeleniumExercises//SeleniumPractice//FileUploadOrangeHRM.exe");
+	@Test(priority=6, enabled = false)	
+	public void fileUpload() throws IOException, InterruptedException
+	{
+		logIn();	
 
-	Thread.sleep(5000);
-	
-	//click on upload button
-	driver.findElement(By.xpath("//button[@type='submit']")).submit();
-	
-	logOut();
-	
-	
-}
-	
+		//find PIM Menu and click on PIM Menu
+		driver.findElement(By.xpath("//span[text()='PIM']")).click();
+
+		//click on configuration button
+		driver.findElement(By.xpath("//span[@class='oxd-topbar-body-nav-tab-item']")).click();
+
+
+		//click on Data import
+		driver.findElement(By.partialLinkText("Data ")).click();
+
+		//click on browse button
+		driver.findElement(By.xpath("//div[@class='oxd-file-button']")).click();
+
+
+		Thread.sleep(5000);//pause of 5 seconds
+
+		Runtime.getRuntime().exec("C://Users//ASUS//Desktop//CS_SeleniumExercises//SeleniumPractice//FileUploadOrangeHRM.exe");
+
+		Thread.sleep(5000);
+
+		//click on upload button
+		driver.findElement(By.xpath("//button[@type='submit']")).submit();
+
+		logOut();
+
+
+	}
+
 	public void logIn()
 	{
 		//find username and enter username "Admin"
@@ -302,6 +302,48 @@ public void fileUpload() throws IOException, InterruptedException
 
 	}
 
+	@Test(priority=7, enabled=true)
+	public void deleteEmployee() throws InterruptedException
+	{
+		logIn();
+
+		//find PIM Menu and click on PIM Menu
+		driver.findElement(By.xpath("//span[text()='PIM']")).click();
+
+		//Select Employee List
+		driver.findElement(By.xpath("//a[text()='Employee List']")).click();
+
+		//enter employee name
+		driver.findElements(By.tagName("input")).get(1).sendKeys("Odis");
+
+		//driver.findElement(By.tagName("input")).get(1).sendKeys("Nesta");
+
+
+		//Click the search button.
+		driver.findElement(By.xpath("//button[normalize-space()='Search']")).click();
+
+
+		Thread.sleep(3000);
+		///////////////////Delete/////////////////////////
+
+		//click on delete icon of the record
+		driver.findElement(By.xpath("//i[@class='oxd-icon bi-trash']")).click();
+		
+		
+		//click on yes, delete messaage button
+		driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']")).click();
+
+		//check for message "No Record Found"
+		String msg = driver.findElement(By.xpath("(//span[@class='oxd-text oxd-text--span'])[1]")).getText();
+
+		Assert.assertEquals(msg, "No Records Found");
+
+		Thread.sleep(5000);
+		logOut();
+
+	}
+
+
 	@AfterTest
 	public void tearDown() throws InterruptedException
 	{
@@ -314,6 +356,6 @@ public void fileUpload() throws IOException, InterruptedException
 
 	}
 
-
+	//   https://github.com/PallaviTanpure/OrangeHRM_SeleniumPythonProject/blob/master/pageObjects/EmployeePage.py
 
 }
