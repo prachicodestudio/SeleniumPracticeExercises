@@ -86,7 +86,7 @@ public class OrangeHRM {
 		Assert.assertEquals("OrangeHRM", pageTitle);
 	}
 
-	@Test(priority =3, enabled=true)
+	@Test(priority =3, enabled=false)
 	public void addEmployee() throws InterruptedException, IOException
 	{
 		logIn();
@@ -302,7 +302,7 @@ public class OrangeHRM {
 
 	}
 
-	@Test(priority=7, enabled=true)
+	@Test(priority=7, enabled=false)
 	public void deleteEmployee() throws InterruptedException
 	{
 		logIn();
@@ -328,8 +328,8 @@ public class OrangeHRM {
 
 		//click on delete icon of the record
 		driver.findElement(By.xpath("//i[@class='oxd-icon bi-trash']")).click();
-		
-		
+
+
 		//click on yes, delete messaage button
 		driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']")).click();
 
@@ -342,6 +342,65 @@ public class OrangeHRM {
 		logOut();
 
 	}
+
+	@Test(priority=8, enabled=true)
+	public void ListEmployees() throws InterruptedException
+	{
+		logIn();
+		//find PIM Menu and click on PIM Menu
+		driver.findElement(By.xpath("//span[text()='PIM']")).click();
+
+		//Select Employee List
+		driver.findElement(By.xpath("//a[normalize-space()='Employee List']")).click();
+		Thread.sleep(3000);
+		
+		//find total links
+		List<WebElement> totalLinksElements = driver.findElements(By.xpath("//ul[@class='oxd-pagination__ul']/li"));
+		
+		int totalLinks = totalLinksElements.size();
+		
+		for (int i=0; i<totalLinks; i++ )//0,1,2,3,
+		{
+			
+			try
+			{
+			String currentLinkText = totalLinksElements.get(i).getText();
+			
+			
+				int page = Integer.parseInt(currentLinkText);
+				System.out.println("Page: " + page);
+
+				totalLinksElements.get(i).click();
+				
+				Thread.sleep(2000);
+				
+				List <WebElement> emp_list = driver.findElements(By.xpath("//div[@class='oxd-table-card']/div /div[4]"));
+				
+				for(int j=0; j<emp_list.size();j++)
+				{
+					//print last name of each row 
+					String lastName = emp_list.get(j).getText();
+					System.out.println(lastName);
+				}
+			}
+			catch(Exception e)
+			{
+				System.out.println("Not a number.");
+			}
+			
+			
+		}
+
+		Thread.sleep(5000);
+		logOut();
+	}
+
+	
+	
+	
+	
+	
+
 
 
 	@AfterTest
