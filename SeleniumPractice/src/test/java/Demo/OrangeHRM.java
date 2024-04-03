@@ -343,7 +343,7 @@ public class OrangeHRM {
 
 	}
 
-	@Test(priority=8, enabled=true)
+	@Test(priority=8, enabled=false)
 	public void ListEmployees() throws InterruptedException
 	{
 		logIn();
@@ -353,29 +353,29 @@ public class OrangeHRM {
 		//Select Employee List
 		driver.findElement(By.xpath("//a[normalize-space()='Employee List']")).click();
 		Thread.sleep(3000);
-		
+
 		//find total links
 		List<WebElement> totalLinksElements = driver.findElements(By.xpath("//ul[@class='oxd-pagination__ul']/li"));
-		
+
 		int totalLinks = totalLinksElements.size();
-		
+
 		for (int i=0; i<totalLinks; i++ )//0,1,2,3,
 		{
-			
+
 			try
 			{
-			String currentLinkText = totalLinksElements.get(i).getText();
-			
-			
+				String currentLinkText = totalLinksElements.get(i).getText();
+
+
 				int page = Integer.parseInt(currentLinkText);
 				System.out.println("Page: " + page);
 
 				totalLinksElements.get(i).click();
-				
+
 				Thread.sleep(2000);
-				
+
 				List <WebElement> emp_list = driver.findElements(By.xpath("//div[@class='oxd-table-card']/div /div[4]"));
-				
+
 				for(int j=0; j<emp_list.size();j++)
 				{
 					//print last name of each row 
@@ -387,19 +387,61 @@ public class OrangeHRM {
 			{
 				System.out.println("Not a number.");
 			}
-			
-			
+
+
 		}
 
 		Thread.sleep(5000);
 		logOut();
 	}
 
-	
-	
-	
-	
-	
+
+
+
+	@Test(priority=9, enabled=true)
+	public void applyLeave() throws InterruptedException
+	{
+		//find username and enter username "Admin"
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+
+		//find password and enter password admin123
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+
+		//login button click
+		driver.findElement(By.xpath("//button[@type='submit']")).submit();
+		
+		
+		//click on leave menu
+		driver.findElement(By.linkText("Leave")).click();
+		
+		//click on Apply menu
+		driver.findElement(By.linkText("Apply")).click();
+		
+		//click on leave type drop down
+		driver.findElement(By.xpath("//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")).click();
+		
+		//select CAN-FMLA option from leave type dropdown
+		driver.findElement(By.xpath("//*[contains(text(),'CAN')]")).click();
+		
+		//enter from date
+		driver.findElement(By.xpath("//div[@class='oxd-date-input']/input")).sendKeys("2024-08-04");
+		
+		
+		//enter comment
+		driver.findElement(By.tagName("textarea")).sendKeys("This is my personal leave");
+		Thread.sleep(3000);
+		
+		
+		//click on Apply button
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+		
+		Thread.sleep(5000);
+		logOut();
+		
+																												
+
+	}
 
 
 
