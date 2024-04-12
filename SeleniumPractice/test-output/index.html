@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ASUS\AppData\Local\Temp\testng-eclipse--2117360366\testng-customsuite.xml</span>
+                    <span>C:\Users\ASUS\AppData\Local\Temp\testng-eclipse--622238728\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Demo.OrangeHRM" class="method navigator-link" hash-for-method="applyLeave">applyLeave</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="doLoginWithInvalidCredential">doLoginWithInvalidCredential</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="loginTestWithValidCredential">loginTestWithValidCredential</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +126,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Demo.OrangeHRM</span>
+              <span class="class-name">Tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="applyLeave">
-                  </a> <!-- applyLeave -->
-                  <span class="method-name">applyLeave</span>
+                  <a name="doLoginWithInvalidCredential">
+                  </a> <!-- doLoginWithInvalidCredential -->
+                  <span class="method-name">doLoginWithInvalidCredential</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTestWithValidCredential">
+                  </a> <!-- loginTestWithValidCredential -->
+                  <span class="method-name">loginTestWithValidCredential</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ASUS\AppData\Local\Temp\testng-eclipse--2117360366\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ASUS\AppData\Local\Temp\testng-eclipse--622238728\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +157,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Demo.OrangeHRM&quot;/&gt;
+      &lt;class name=&quot;Tests.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -185,16 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'applyLeave')
-data.setCell(0, 2, 'Demo.OrangeHRM')
-data.setCell(0, 3, 16798);
+data.setCell(0, 1, 'doLoginWithInvalidCredential')
+data.setCell(0, 2, 'Tests.LoginTest')
+data.setCell(0, 3, 3449);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginTestWithValidCredential')
+data.setCell(1, 2, 'Tests.LoginTest')
+data.setCell(1, 3, 1197);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -209,30 +225,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">8 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Demo.OrangeHRM</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">deleteEmployee</span>
-                <br/>
-                <span class="ignored-method-name">searchEmployeeNyName</span>
-                <br/>
-                <span class="ignored-method-name">addEmployee</span>
-                <br/>
-                <span class="ignored-method-name">fileUpload</span>
-                <br/>
-                <span class="ignored-method-name">loginTestWithValidCredential</span>
-                <br/>
-                <span class="ignored-method-name">searchEmployeeById</span>
-                <br/>
-                <span class="ignored-method-name">ListEmployees</span>
-                <br/>
-                <span class="ignored-method-name">doLoginWithInvalidCredential</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -241,18 +236,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Demo.OrangeHRM</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">applyLeave</span>
-                <span class="method-start">5390 ms</span>
+                <span class="method-name">doLoginWithInvalidCredential</span>
+                <span class="method-start">5772 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginTestWithValidCredential</span>
+                <span class="method-start">9225 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22192 ms</span>
+                <span class="method-start">10424 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -73,3 +73,25 @@ Each method will have some own functionality
 2 Compile script and create exe
 3 Use exe in selenium code
 /************************************************************************************************/
+
+
+
+Page Object Model (POM) Design Pattern
+--------------------------------
+
+What is the Page Object Model (POM)?
+
+Page Object Model is a design pattern in test automation to create an Object Repository for web UI elements. 
+Every web page in the WEB application should have a corresponding page class. 
+
+This Page class will find the WebElements and also may contain page methods which perform operations on those WebElements.
+
+Page Classes (Locators) + Test Cases (Test Scripts)
+
+Benefits of POM 
+---------------
+Duplication of Code
+
+Code Maintenance
+
+Test cases become short and optimized as you will be able to reuse page object methods in the POM.
